@@ -19,7 +19,7 @@ ALTER TABLE `Registers` DROP FOREIGN KEY `Officer_Registers`;
 
 ALTER TABLE `Register_details` DROP FOREIGN KEY `Registers_Register_details`;
 
-ALTER TABLE `Register_details` DROP FOREIGN KEY `Cource_Register_details`;
+ALTER TABLE `Register_details` DROP FOREIGN KEY `Course_Register_details`;
 
 # ---------------------------------------------------------------------- #
 # Drop table "Register_details"                                          #
@@ -32,14 +32,14 @@ ALTER TABLE `Register_details` DROP PRIMARY KEY;
 DROP TABLE `Register_details`;
 
 # ---------------------------------------------------------------------- #
-# Drop table "Cource"                                                    #
+# Drop table "Course"                                                    #
 # ---------------------------------------------------------------------- #
 
 # Drop constraints #
 
-ALTER TABLE `Cource` DROP PRIMARY KEY;
+ALTER TABLE `Course` DROP PRIMARY KEY;
 
-DROP TABLE `Cource`;
+DROP TABLE `Course`;
 
 # ---------------------------------------------------------------------- #
 # Drop table "Registers"                                                 #
