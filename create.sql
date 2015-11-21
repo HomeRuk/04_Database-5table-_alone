@@ -25,7 +25,7 @@ USE 5605104046db;
 # ---------------------------------------------------------------------- #
 
 CREATE TABLE `Student` (
-    `Std_id` INTEGER(10) NOT NULL,
+    `Std_id` INTEGER(11) NOT NULL,
     `Std_pass` VARCHAR(40) NOT NULL,
     `Std_age` VARCHAR(40),
     `Std_address` VARCHAR(200),
@@ -58,14 +58,14 @@ CREATE TABLE `Registers` (
 );
 
 # ---------------------------------------------------------------------- #
-# Add table "Cource"                                                     #
+# Add table "Course"                                                     #
 # ---------------------------------------------------------------------- #
 
-CREATE TABLE `Cource` (
+CREATE TABLE `Course` (
     `Co_id` INTEGER(4) NOT NULL,
     `Co_credit` INTEGER(2),
     `Co_hours` VARCHAR(3),
-    CONSTRAINT `PK_Cource` PRIMARY KEY (`Co_id`)
+    CONSTRAINT `PK_Course` PRIMARY KEY (`Co_id`)
 );
 
 # ---------------------------------------------------------------------- #
@@ -92,8 +92,8 @@ ALTER TABLE `Registers` ADD CONSTRAINT `Officer_Registers`
 ALTER TABLE `Register_details` ADD CONSTRAINT `Registers_Register_details` 
     FOREIGN KEY (`Reg_id`) REFERENCES `Registers` (`Reg_id`);
 
-ALTER TABLE `Register_details` ADD CONSTRAINT `Cource_Register_details` 
-    FOREIGN KEY (`Co_id`) REFERENCES `Cource` (`Co_id`);
+ALTER TABLE `Register_details` ADD CONSTRAINT `Course_Register_details` 
+    FOREIGN KEY (`Co_id`) REFERENCES `Course` (`Co_id`);
 	
 SET SQL_MODE=@OLD_SQL_MODE;	
 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;
